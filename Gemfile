@@ -18,6 +18,9 @@ gem "puma", "~> 5.0"
 # Wrapper for processing images [https://github.com/janko/image_processing]
 gem 'image_processing'
 
+# Validation for active storage [https://github.com/igorkasyanchuk/active_storage_validations]
+gem 'active_storage_validations'
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 
