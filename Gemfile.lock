@@ -189,6 +189,8 @@ GEM
     ruby-vips (2.1.4)
       ffi (~> 1.12)
     rubyzip (2.3.2)
+    sass-rails (6.0.0)
+      sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -251,7 +253,11 @@ DEPENDENCIES
   pry
   puma (~> 5.0)
   rails (~> 7.0.6)
+<<<<<<< HEAD
   rails-i18n
+=======
+  sass-rails
+>>>>>>> b79311b... Add gem 'sass-rails'
   selenium-webdriver (~> 4.4)
   sprockets-rails
   stimulus-rails
