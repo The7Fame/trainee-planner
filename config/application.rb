@@ -33,5 +33,14 @@ module TraineePlanner
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Where the I18n library should search for translation files
+    config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
+
+    # Permitted locales available for the application
+    config.i18n.available_locales = %i[en ru]
+
+    # Set default locale
+    config.i18n.default_locale = :en
   end
 end
