@@ -79,3 +79,8 @@ group :development do
   # gem "spring"
 end
 
+group :test do
+  # For web application testing [https://github.com/SeleniumHQ/selenium]
+  gem 'selenium-webdriver', '~> 4.4'
+
+end
