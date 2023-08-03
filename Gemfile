@@ -101,6 +101,9 @@ group :test do
   # Acceptance test framework for web applications [https://github.com/teamcapybara/capybara]
   gem 'capybara'
 
+  # To test the functionality of the application [https://github.com/thoughtbot/shoulda-matchers]
+  gem 'shoulda-matchers', '~> 5.3'
+
   # For web application testing [https://github.com/SeleniumHQ/selenium]
   gem 'selenium-webdriver', '~> 4.4'
 
