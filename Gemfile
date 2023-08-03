@@ -104,6 +104,9 @@ group :test do
   # To test the functionality of the application [https://github.com/thoughtbot/shoulda-matchers]
   gem 'shoulda-matchers', '~> 5.3'
 
+  # Code coverage for Ruby [https://github.com/simplecov-ruby/simplecov]
+  gem 'simplecov', require: false
+
   # For web application testing [https://github.com/SeleniumHQ/selenium]
   gem 'selenium-webdriver', '~> 4.4'
 
