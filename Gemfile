@@ -60,6 +60,9 @@ gem 'bootstrap', '~> 5.3.0.alpha3'
 # Use SCSS for stylesheets [https://github.com/rails/sass-rails]
 gem 'sass-rails'
 
+# RuboCop is a Ruby code style checking [https://github.com/rubocop/rubocop]
+gem 'rubocop', require: false
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
