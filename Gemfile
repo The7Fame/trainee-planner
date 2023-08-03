@@ -95,6 +95,9 @@ group :test do
   # RSpec testing framework to Ruby on Rails [https://github.com/rspec/rspec-rails]
   gem 'rspec-rails'
 
+  # Clean ActiveRecord with Database Cleaner [https://github.com/DatabaseCleaner/database_cleaner-active_record]
+  gem 'database_cleaner-active_record'
+
   # Acceptance test framework for web applications [https://github.com/teamcapybara/capybara]
   gem 'capybara'
 
