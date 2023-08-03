@@ -63,6 +63,9 @@ gem 'sass-rails'
 # RuboCop is a Ruby code style checking [https://github.com/rubocop/rubocop]
 gem 'rubocop', require: false
 
+# Automatic Rails code style checking tool [https://github.com/rubocop/rubocop-rails]
+gem 'rubocop-rails', require: false
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
