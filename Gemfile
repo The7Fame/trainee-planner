@@ -92,6 +92,9 @@ group :development do
 end
 
 group :test do
+  # RSpec testing framework to Ruby on Rails [https://github.com/rspec/rspec-rails]
+  gem 'rspec-rails'
+
   # For web application testing [https://github.com/SeleniumHQ/selenium]
   gem 'selenium-webdriver', '~> 4.4'
 
