@@ -107,6 +107,9 @@ group :test do
   # Code coverage for Ruby [https://github.com/simplecov-ruby/simplecov]
   gem 'simplecov', require: false
 
+  # Brings back assigns and assert_template to your Rails tests [https://github.com/rails/rails-controller-testing]
+  gem 'rails-controller-testing'
+
   # For web application testing [https://github.com/SeleniumHQ/selenium]
   gem 'selenium-webdriver', '~> 4.4'
 
