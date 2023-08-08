@@ -92,6 +92,24 @@ group :development do
 end
 
 group :test do
+  # RSpec testing framework to Ruby on Rails [https://github.com/rspec/rspec-rails]
+  gem 'rspec-rails'
+
+  # Clean ActiveRecord with Database Cleaner [https://github.com/DatabaseCleaner/database_cleaner-active_record]
+  gem 'database_cleaner-active_record'
+
+  # Acceptance test framework for web applications [https://github.com/teamcapybara/capybara]
+  gem 'capybara'
+
+  # To test the functionality of the application [https://github.com/thoughtbot/shoulda-matchers]
+  gem 'shoulda-matchers', '~> 5.3'
+
+  # Code coverage for Ruby [https://github.com/simplecov-ruby/simplecov]
+  gem 'simplecov', require: false
+
+  # Brings back assigns and assert_template to your Rails tests [https://github.com/rails/rails-controller-testing]
+  gem 'rails-controller-testing'
+
   # For web application testing [https://github.com/SeleniumHQ/selenium]
   gem 'selenium-webdriver', '~> 4.4'
 
