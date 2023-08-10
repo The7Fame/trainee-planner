@@ -7,6 +7,11 @@
         </li>
       </ul>
     </div>
+    <% if current_user %>
+      <%= render partial: 'users/partials/user_dropdown' %>
+    <% else %>
+      <%= render partial: 'users/partials/entry' %>
+    <% end %>
     <%= render partial: 'layouts/locales' %>
   </div>
 </nav>
