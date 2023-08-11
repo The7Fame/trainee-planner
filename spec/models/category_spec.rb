@@ -6,7 +6,7 @@ RSpec.describe 'Category', type: :model do
   subject(:category) { build(:category) }
 
   context 'when category is valid' do
-    it { expect(build(:category)).to be_valid }
+    it { expect(category).to be_valid }
   end
 
   describe 'validations' do
@@ -37,5 +37,9 @@ RSpec.describe 'Category', type: :model do
 
       it { expect(category_work.name).to eql 'Work' }
     end
+  end
+
+  describe 'associations' do
+    it { expect(category).to have_many(:events).dependent(:destroy) }
   end
 end
