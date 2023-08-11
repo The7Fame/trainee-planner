@@ -2,9 +2,9 @@
 
 5.times do |index|
   User.create_or_find_by!(
-    first_name: "User#{index + 1}",
-    email: "test#{index + 1}@test.com",
-    password: "password#{index + 1}"
+    first_name: Faker::Name.first_name,
+    email: "user_#{index + 1}@example.com",
+    password: 'password'
   )
 rescue ActiveRecord::RecordInvalid => e
   Rails.logger.debug e.message
