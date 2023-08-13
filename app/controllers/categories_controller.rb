@@ -39,7 +39,7 @@ class CategoriesController < ApplicationController
     if CategoriesServices::DeleteCategoryService.new(category: @category, user: current_user).call
       redirect_to categories_path, notice: t('flash.notice.delete')
     else
-      render :new, status: :unprocessable_entity
+      redirect_to categories_path, status: :unprocessable_entity
     end
   end
 

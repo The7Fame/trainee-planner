@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Category < ApplicationRecord
+  include CategoryMethods
+
   paginates_per 15
 
   validates :name, presence: true, uniqueness: { case_sensitive: false }

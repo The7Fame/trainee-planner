@@ -60,13 +60,14 @@ en:
     categories: "Categories"
     category: "Category"
     edit: "Edit category"
-    no: "No Categories"
+    no_categories: "No Categories"
 
   flash:
     notice: 
       create: 'Category successfully created'
       delete: 'Category successfully deleted'
       update: 'Category updated successfully'
+      error: 'You already have this category'
   
   pagination:
     next: "Next"
