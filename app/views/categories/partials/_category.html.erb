@@ -1,0 +1,7 @@
+<tr class="text-center">
+  <th scope="row"><%= link_to index + 1, category_path(category.id) %></th>
+  <td><%= category.name %></td>
+  <td>
+    <%= button_to 'Delete', category_path(category.id),  method: :delete, class: "btn btn-outline-danger"%>
+  </td>
+</tr>
