@@ -72,6 +72,9 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 
+  # A Ruby gem to load environment variables from .env file [https://github.com/bkeepers/dotenv]
+  gem 'dotenv-rails'
+
   # Integration between factory_bot [https://github.com/thoughtbot/factory_bot_rails]
   gem 'factory_bot_rails'
 
