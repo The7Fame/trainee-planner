@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Event < ApplicationRecord
+  paginates_per 20
+
   belongs_to :category, dependent: :destroy
   belongs_to :user, dependent: :destroy
 
@@ -10,6 +12,7 @@ class Event < ApplicationRecord
   validate :reminder_date_validity, if: :reminder_on_changed?
   validate :event_date_validity
 
+  default_scope { order(event_date: :asc) }
   scope :future, -> { where(event_date: DateTime.now.end_of_day..) }
   scope :today, -> { where(event_date: DateTime.now.beginning_of_day..DateTime.now.end_of_day) }
 
@@ -19,15 +22,15 @@ class Event < ApplicationRecord
     return if reminder_on.blank?
 
     if reminder_on.past?
-      errors.add(:reminder_on, "can't be in the past")
+      errors.add(:reminder_on, :past)
     elsif reminder_on >= event_date
-      errors.add(:reminder_on, "can't be equal or greater than event date")
+      errors.add(:reminder_on, :too_late)
     end
   end
 
   def event_date_validity
     return if event_date&.future?
 
-    errors.add(:event_date, "can't be in the past")
+    errors.add(:event_date, :past)
   end
 end

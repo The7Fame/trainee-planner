@@ -10,7 +10,7 @@ users = 5.times.map do |index|
   end
 end
 
-10.times do
+100.times do
   Event.create!(
     name: Faker::Lorem.word,
     event_date: Faker::Date.between(from: DateTime.now.tomorrow, to: 1.year.from_now),

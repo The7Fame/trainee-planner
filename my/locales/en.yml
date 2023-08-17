@@ -1,5 +1,20 @@
 en:
 
+  activerecord:
+    errors:
+      models:
+        event:
+          attributes:
+            event_date: 
+              past: "can't be in the past"
+            reminder_on: 
+              past: "can't be in the past"
+              too_late: "can't be equal or greater than event date"
+
+  time:
+    formats:
+      default: "%Y-%m-%d %H:%M"
+
   nav:
     company: "Company"
     en: "EN"
@@ -48,7 +63,7 @@ en:
     change_btn: "Change"
     instruction_btn: "Send instructions"
     confirm_link: "Confirm my account"
-  
+
   btn:
     delete: "Delete"
     create: "Create"
@@ -64,13 +79,43 @@ en:
 
   flash:
     notice: 
-      create: 'Category successfully created'
-      delete: 'Category successfully deleted'
-      update: 'Category updated successfully'
-      error: 'You already have this category'
+      category:
+        create: 'Category successfully created'
+        delete: 'Category successfully deleted'
+        update: 'Category updated successfully'
+      event:
+        create: 'Event successfully created'
+        delete: 'Event successfully deleted'
+        update: 'Event updated successfully'
   
   pagination:
     next: "Next"
     last: "Last"
     first: "First"
     previous: "Previous"
+
+  event:
+    name: "Name"
+    category: "Category"
+    time: "Time"
+    edit: "Edit event"
+    create: "Create event"
+    events: "Events"
+    name: "Name"
+    description: "Description"
+    category: "Category"
+    reminder: "Reminder at"
+    weather: "Weather in this day"
+    info: "Information is not available"
+    no_events: "No Events"
+
+  btn:
+    add: "Add"
+    edit: "Edit"
+    create: "Create"
+    delete: "Delete"
+      
+  pagination:
+    next: "Next"
+    last: "Last"
+    first: "First"
