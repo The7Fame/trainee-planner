@@ -62,6 +62,9 @@ gem 'bootstrap', '~> 5.3.0.alpha3'
 # Use SCSS for stylesheets [https://github.com/rails/sass-rails]
 gem 'sass-rails'
 
+# Allows to easily implement pagination [https://github.com/kaminari/kaminari]
+gem 'kaminari'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
