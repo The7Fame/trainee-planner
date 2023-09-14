@@ -114,7 +114,7 @@ ru:
     time: "Время"
     edit: "Изменение"
     create: "Создание события"
-    events: "Events"
+    events: "События"
     description: "Описание"
     category: "Категория"
     reminder: "Напомнить в"
@@ -127,12 +127,6 @@ ru:
     edit: "Изменить"
     create: "Создать"
     delete: "Удалить"
-  
-  flash:
-    notice: 
-      create: 'Событие успешно создано'
-      delete: 'Событие успешно удалено'
-      update: 'Событие успешно обновлено'
 
   pagination:
     next: "Следующая"
