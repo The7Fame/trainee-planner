@@ -10,6 +10,9 @@ class Event < ApplicationRecord
   validate :reminder_date_validity, if: :reminder_on_changed?
   validate :event_date_validity
 
+  scope :future, -> { where(event_date: DateTime.now.end_of_day..) }
+  scope :today, -> { where(event_date: DateTime.now.beginning_of_day..DateTime.now.end_of_day) }
+
   private
 
   def reminder_date_validity

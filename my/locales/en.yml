@@ -16,6 +16,9 @@ en:
     current_password: "Current password"
     update: "Update"
     forgot_password: "Forgot password?"
+    future_events: "You have events in future:"
+    today_events: "You have events today:"
+    start: "Login or Sign Up first"
 
   nav:
     company: "Company"
