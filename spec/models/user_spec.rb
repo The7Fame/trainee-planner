@@ -3,10 +3,10 @@
 require 'rails_helper'
 
 RSpec.describe 'User', type: :model do
-  subject(:user) { build :user }
+  subject(:user) { build(:user) }
 
   context 'when user is valid' do
-    it { expect(build(:user)).to be_valid }
+    it { expect(user).to be_valid }
   end
 
   describe 'validations' do
@@ -27,5 +27,9 @@ RSpec.describe 'User', type: :model do
 
       it { expect(user_with_last_name.last_name).to be_a(String) }
     end
+  end
+
+  describe 'associations' do
+    it { expect(user).to have_many(:events).dependent(:destroy) }
   end
 end
