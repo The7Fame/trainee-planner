@@ -30,9 +30,10 @@ ru:
     current_password: "Текущий пароль"
     update: "Обновить"
     forgot_password: "Забыли пароль?"
-    future_events: "Количество будущих событий:"
-    today_events: "Количество событий сегодня:"
+    future_events: "Количество будущих событий: %{count}"
+    today_events: "Количество событий сегодня: %{count}"
     start: "Сначала войдите в систему или зарегистрируйтесь"
+    welcome: "Добро пожаловать, %{user}"
 
   nav:
     company: "Компания"

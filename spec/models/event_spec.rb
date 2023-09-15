@@ -72,4 +72,18 @@ RSpec.describe Event, type: :model do
       it { expect(event_with_reminder.reminder_on).to eql(event_with_reminder.event_date - 4.hours) }
     end
   end
+
+  describe 'scopes' do
+    let!(:category) { create(:category) }
+    let!(:today_event) { create(:event, category:, event_date: DateTime.now + 10.minutes) }
+    let!(:future_event) { create(:event, category:, event_date: DateTime.tomorrow) }
+
+    describe '.future' do
+      it { expect(described_class.future).to match_array([future_event]) }
+    end
+
+    describe '.today' do
+      it { expect(described_class.today).to match_array([today_event]) }
+    end
+  end
 end
