@@ -31,5 +31,7 @@ RSpec.describe 'User', type: :model do
 
   describe 'associations' do
     it { expect(user).to have_many(:events).dependent(:destroy) }
+    it { expect(user).to have_many(:user_categories).dependent(:destroy) }
+    it { expect(user).to have_many(:categories).through(:user_categories) }
   end
 end

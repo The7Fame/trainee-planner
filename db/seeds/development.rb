@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-categories = %w[Personal Work Vacation].map { |category| Category.find_or_create_by!(name: category) }
+default_categories = %w[Personal Work Vacation].map { |category| Category.find_or_create_by!(name: category) }
 
 users = 5.times.map do |index|
   User.find_or_create_by!(email: "user_#{index}@example.com") do |user|
@@ -14,7 +14,14 @@ end
   Event.create!(
     name: Faker::Lorem.word,
     event_date: Faker::Date.between(from: DateTime.now.tomorrow, to: 1.year.from_now),
-    category: categories.sample,
+    category: default_categories.sample,
     user: users.sample
+  )
+end
+
+5.times do
+  UserCategory.find_or_create_by!(
+    user: users.sample,
+    category: Category.find_or_create_by!(name: Faker::Lorem.unique.word)
   )
 end
