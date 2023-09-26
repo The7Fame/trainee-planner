@@ -1,0 +1,17 @@
+<div class="col-sm-6 p-4">
+  <h2><%= t('event.weather') %></h2>
+  <div class="d-flex mb-4">
+    <i class="me-sm-2"><%= t('weather.temperature') %></i>
+    <b><%= weather.temperature %></b>
+  </div>
+  <div class="d-flex mb-4">
+    <i class="me-sm-2"><%= t('weather.on_the_street') %></i>
+    <b><%= weather.on_the_street %></b>
+  </div>
+  <div class="d-flex mb-4">
+    <i class="me-sm-2"><%= t('weather.summary') %></i>
+    <b><%= weather.summary %></b>
+  </div>
+  <i><%= t('weather.choose_time') %></i>
+  <%= render partial: 'events/partials/time' %>
+</div>

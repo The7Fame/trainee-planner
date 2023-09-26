@@ -110,8 +110,15 @@ en:
     create: "Create"
     delete: "Delete"
     search: "Search"
+    submit: "Submit"
       
   pagination:
     next: "Next"
     last: "Last"
     first: "First"
+  
+  weather:
+    temperature: "Temperature:"
+    on_the_street: "On the street:"
+    summary: "Summary:"
+    chooser_time: "Choose time:"

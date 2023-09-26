@@ -11,7 +11,9 @@ class EventsController < ApplicationController
     ).call.page(params[:page]).per(params[:per_page])
   end
 
-  def show; end
+  def show
+    @weather = WeatherPresenter.new(event: @event, time_params:)
+  end
 
   def new
     @event = Event.new
@@ -48,6 +50,10 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(:name, :description, :event_date, :reminder_on, :category_id)
+  end
+
+  def time_params
+    params.permit(:time)
   end
 
   def search_params

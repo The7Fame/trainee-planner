@@ -123,9 +123,16 @@ ru:
     create: "Создать"
     delete: "Удалить"
     search: "Поиск"
+    submit: "Подтвердить"
 
   pagination:
     next: "Следующая"
     last: "Последняя"
     first: "Первая"
     previous: "Предыдущая"
+  
+  weather:
+    temperature: "Температура"
+    on_the_street: "На улице"
+    summary: "Описание"
+    choose_time: "Выберите время"
