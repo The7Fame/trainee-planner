@@ -13,5 +13,5 @@
     <b><%= weather.summary %></b>
   </div>
   <i><%= t('weather.choose_time') %></i>
-  <%= render partial: 'events/partials/time' %>
+  <%= render partial: 'events/partials/time', locals: { event: event } %>
 </div>

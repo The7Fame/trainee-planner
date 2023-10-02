@@ -4,11 +4,14 @@ require 'rails_helper'
 
 RSpec.describe 'events/show', type: :view do
   let(:event) { create(:event, user:) }
+  let(:weather_presenter) { WeatherPresenter.new(event:, time_params:) }
   let(:user) { create(:user) }
+  let(:time_params) { { time: '00:00' } }
 
   before do
     sign_in(user)
     assign(:event, event)
+    assign(:weather, weather_presenter)
     render template: 'events/show'
   end
 

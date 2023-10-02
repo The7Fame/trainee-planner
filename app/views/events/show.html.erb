@@ -19,6 +19,6 @@
            method: :delete, class: "btn btn-danger" %>
       </div>
     </div>
-    <%= render partial: 'events/partials/weather', locals: { weather: @weather} %>
+    <%= render partial: 'events/partials/weather', locals: { event: @event, weather: @weather } %>
   </div>
 </div>
