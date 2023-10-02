@@ -10,6 +10,10 @@ ru:
         current_password: "Текущий пароль"
       category:
         name: "Категория"
+      event:
+        name: "Название"
+        event_date: "Дата события"
+        reminder_on: "Дата напоминания"
     errors:
       models:
         user:
@@ -20,6 +24,27 @@ ru:
           attributes:
             name: 
               blank: "не может быть пустой"
+        event:
+          attributes:
+            name: 
+              blank: "не может быть пустым"
+            event_date: 
+              blank: "не может быть пустой"
+              past: "не может быть в прошлом"
+            reminder_on: 
+              past: "не может быть в прошлом"
+              too_late: "не может быть равной или больше даты события"
+
+  time:
+    formats:
+      default: "%Y-%m-%d %H:%M"
+  
+  nav:
+    company: "Компания"
+    en: "АНГ"
+    ru: "РУС"
+    categories: "Категории"
+    language: "Язык"
 
   user:
     sign_up: "Зареги-ся"
@@ -41,13 +66,6 @@ ru:
     today_events: "Количество событий сегодня: %{count}"
     start: "Сначала войдите в систему или зарегистрируйтесь"
     welcome: "Добро пожаловать, %{user}"
-
-  nav:
-    company: "Компания"
-    en: "АНГ"
-    ru: "РУС"
-    categories: "Категории"
-    language: "Язык"
 
   devise:
     resend_confirm: "Отправить повторно инструкцию по подтверждению"
@@ -89,7 +107,27 @@ ru:
       delete: 'Категория успешно удалена'
       update: 'Категория успешно обновлена'
       error: 'У вас уже есть эта категория'
-  
+
+  event:
+    name: "Название"
+    category: "Категория"
+    time: "Время"
+    edit: "Изменение"
+    create: "Создание события"
+    events: "События"
+    description: "Описание"
+    category: "Категория"
+    reminder: "Напомнить в"
+    weather: "Погода в этот день"
+    info: "Информация недоступна"
+    no_events: "Нет событий"
+
+  btn:
+    add: "Добавить"
+    edit: "Изменить"
+    create: "Создать"
+    delete: "Удалить"
+
   pagination:
     next: "Следующая"
     last: "Последняя"

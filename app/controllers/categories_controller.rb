@@ -15,7 +15,7 @@ class CategoriesController < ApplicationController
   def update
     if CategoriesServices::UpdateCategoryService.new(category: @category, category_params:,
                                                      user: current_user).call
-      redirect_to categories_path, notice: t('flash.notice.update')
+      redirect_to categories_path, notice: t('flash.notice.category.update')
     else
       render :new, status: :unprocessable_entity
     end
@@ -29,7 +29,7 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
     if CategoriesServices::CreateCategoryService.new(category: @category, category_params:,
                                                      user: current_user).call
-      redirect_to categories_path, notice: t('flash.notice.create')
+      redirect_to categories_path, notice: t('flash.notice.category.create')
     else
       render :new, status: :unprocessable_entity
     end
@@ -37,7 +37,7 @@ class CategoriesController < ApplicationController
 
   def destroy
     if CategoriesServices::DeleteCategoryService.new(category: @category, user: current_user).call
-      redirect_to categories_path, notice: t('flash.notice.delete')
+      redirect_to categories_path, notice: t('flash.notice.category.delete')
     else
       redirect_to categories_path, status: :unprocessable_entity
     end
