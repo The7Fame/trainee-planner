@@ -1,4 +1,5 @@
 ru:
+
   activerecord:
     attributes:
       user:
@@ -7,11 +8,17 @@ ru:
         password: "Пароль"
         email: "Почта"
         current_password: "Текущий пароль"
+      category:
+        name: "Категория"
     errors:
       models:
         user:
           attributes:
             email: 
+              blank: "не может быть пустой"
+        category:
+          attributes:
+            name: 
               blank: "не может быть пустой"
 
   user:
@@ -39,6 +46,7 @@ ru:
     company: "Компания"
     en: "АНГ"
     ru: "РУС"
+    categories: "Категории"
     language: "Язык"
 
   devise:
@@ -61,3 +69,29 @@ ru:
     change_btn: "Изменить"
     instruction_btn: "Отправить инструкцию"
     confirm_link: "Подтвердить учетную запись"
+
+  btn:
+    delete: "Удалить"
+    create: "Создать"
+    edit: "Изменить"
+
+  category:
+    name: "Имя"
+    creation: "Создать категорию"
+    categories: "Категории"
+    category: "Категория"
+    edit: "Изменить категорию"
+    no_categories: "Нет категорий"
+    
+  flash:
+    notice: 
+      create: 'Категория успешно создана'
+      delete: 'Категория успешно удалена'
+      update: 'Категория успешно обновлена'
+      error: 'У вас уже есть эта категория'
+  
+  pagination:
+    next: "Следующая"
+    last: "Последняя"
+    first: "Первая"
+    previous: "Предыдущая"

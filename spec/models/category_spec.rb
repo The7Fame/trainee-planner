@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Category', type: :model do
+RSpec.describe Category, type: :model do
   subject(:category) { build(:category) }
 
   context 'when category is valid' do

@@ -1,5 +1,12 @@
 en:
 
+  nav:
+    company: "Company"
+    en: "EN"
+    ru: "RU"
+    categories: "Categories"
+    language: "Language"
+
   user:
     sign_up: "Sign Up"
     sign_out: "Sign out"
@@ -21,12 +28,6 @@ en:
     start: "Login or Sign Up first"
     welcome: "Welcome, %{user}"
 
-  nav:
-    company: "Company"
-    en: "EN"
-    ru: "RU"
-    language: "Language"
-
   devise:
     resend_confirm: "Resend confirmation instructions"
     resend_btn: "Resend"
@@ -47,3 +48,29 @@ en:
     change_btn: "Change"
     instruction_btn: "Send instructions"
     confirm_link: "Confirm my account"
+  
+  btn:
+    delete: "Delete"
+    create: "Create"
+    edit: "Edit"
+  
+  category:
+    name: "Name"
+    creation: "Create category"
+    categories: "Categories"
+    category: "Category"
+    edit: "Edit category"
+    no_categories: "No Categories"
+
+  flash:
+    notice: 
+      create: 'Category successfully created'
+      delete: 'Category successfully deleted'
+      update: 'Category updated successfully'
+      error: 'You already have this category'
+  
+  pagination:
+    next: "Next"
+    last: "Last"
+    first: "First"
+    previous: "Previous"
