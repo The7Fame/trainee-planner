@@ -65,6 +65,9 @@ gem 'sass-rails'
 # Allows to easily implement pagination [https://github.com/kaminari/kaminari]
 gem 'kaminari'
 
+# Allows to easily interact with web services and APIs using HTTP requests and responses [https://github.com/jnunemaker/httparty]
+gem 'httparty'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
