@@ -13,8 +13,11 @@ class Event < ApplicationRecord
   validate :event_date_validity
 
   default_scope { order(event_date: :asc) }
+
   scope :future, -> { where(event_date: DateTime.now.end_of_day..) }
   scope :today, -> { where(event_date: DateTime.now.beginning_of_day..DateTime.now.end_of_day) }
+  scope :by_category, ->(category_id) { where(category_id:) }
+  scope :by_name, ->(name) { where('name like ?', "%#{name}%") }
 
   private
 

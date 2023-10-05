@@ -5,7 +5,10 @@ class EventsController < ApplicationController
   before_action :set_event, only: %i[show edit update destroy]
 
   def index
-    @events = current_user.events.page(params[:page]).per(params[:per_page])
+    @events = EventsServices::SearchEventsService.new(
+      search_params:,
+      user: current_user
+    ).call.page(params[:page]).per(params[:per_page])
   end
 
   def show; end
@@ -45,6 +48,10 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(:name, :description, :event_date, :reminder_on, :category_id)
+  end
+
+  def search_params
+    params.permit(:search, :category_id)
   end
 
   def set_event

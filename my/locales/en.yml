@@ -64,11 +64,6 @@ en:
     instruction_btn: "Send instructions"
     confirm_link: "Confirm my account"
 
-  btn:
-    delete: "Delete"
-    create: "Create"
-    edit: "Edit"
-  
   category:
     name: "Name"
     creation: "Create category"
@@ -114,6 +109,7 @@ en:
     edit: "Edit"
     create: "Create"
     delete: "Delete"
+    search: "Search"
       
   pagination:
     next: "Next"

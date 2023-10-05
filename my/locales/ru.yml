@@ -88,11 +88,6 @@ ru:
     instruction_btn: "Отправить инструкцию"
     confirm_link: "Подтвердить учетную запись"
 
-  btn:
-    delete: "Удалить"
-    create: "Создать"
-    edit: "Изменить"
-
   category:
     name: "Имя"
     creation: "Создать категорию"
@@ -127,6 +122,7 @@ ru:
     edit: "Изменить"
     create: "Создать"
     delete: "Удалить"
+    search: "Поиск"
 
   pagination:
     next: "Следующая"
