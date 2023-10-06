@@ -71,6 +71,9 @@ gem 'httparty'
 # Provides syntax for writing and deploying cron jobs [https://github.com/javan/whenever]
 gem 'whenever', require: false
 
+# Efficient background processing [https://github.com/sidekiq/sidekiq]
+gem 'sidekiq', '~> 6.1'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
