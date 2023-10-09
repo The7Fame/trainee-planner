@@ -13,8 +13,10 @@
         </div>
       <% end %>
       <div class="col-sm-6 btns d-flex align-items-center">
-        <%= link_to t('btn.edit'), edit_event_path(@event.id, locale: I18n.locale), 
+        <% if @event.valid? %>
+          <%= link_to t('btn.edit'), edit_event_path(@event.id, locale: I18n.locale), 
            class: "btn btn-primary me-auto px-4" %>
+        <% end %>
         <%= button_to t('btn.delete'), event_path(@event.id, locale: I18n.locale), 
            method: :delete, class: "btn btn-danger" %>
       </div>
