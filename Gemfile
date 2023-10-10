@@ -68,6 +68,9 @@ gem 'kaminari'
 # Allows to easily interact with web services and APIs using HTTP requests and responses [https://github.com/jnunemaker/httparty]
 gem 'httparty'
 
+# Provides syntax for writing and deploying cron jobs [https://github.com/javan/whenever]
+gem 'whenever', require: false
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
