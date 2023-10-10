@@ -1,5 +1,5 @@
-<h1>Hi, <%= @user.first_name %></h1>
-<p>We are sending you this email to remind you that <%= @event.name %> is coming soon!</p>
-<p>Date: <%= @event.event_date %></p>
-<p><%= link_to "Your event", @url %></p>
-<p>Thank you for using our service!</p>
+<h1><%= t('mailer.greetings', user: @user.first_name) %></h1>
+<p><%= t('mailer.coming_event', event_name: @event.name) %></p>
+<p><%= t('mailer.date', event_date: @event.event_date) %></p>
+<p><%= link_to t('mailer.event_link'), @url %></p>
+<p><%= t('mailer.thanks') %></p>
