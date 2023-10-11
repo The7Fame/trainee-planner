@@ -21,9 +21,6 @@
            method: :delete, class: "btn btn-danger" %>
       </div>
     </div>
-    <div class="col-sm-6 p-4">
-      <h2><%= t('event.weather') %></h2>
-      <p><%= t('event.info') %></p>
-    </div>
+    <%= render partial: 'events/partials/weather', locals: { event: @event, weather: @weather } %>
   </div>
 </div>

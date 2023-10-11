@@ -1,0 +1,4 @@
+<%= form_with url: event_path(event.id, locale: I18n.locale), method: :get do |f| %>
+  <%= f.time_field :time, placeholder: t('weather.choose_time') %>
+  <%= f.submit t('btn.submit'), class: "btn btn-primary" %>
+<% end %>

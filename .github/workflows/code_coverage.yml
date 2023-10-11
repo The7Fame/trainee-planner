@@ -5,6 +5,11 @@ on:
     branches:
       - '**'
 
+env:
+  API: 0ab53c5238a1c2403b2ff0c4719f166eafc1978c47dc9af3cee5b08e18ab44ae
+  LAT: 53.883945
+  LNG: 27.541989
+
 jobs:
   Code-coverage:
     runs-on: ubuntu-latest
