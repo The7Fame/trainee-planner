@@ -5,13 +5,24 @@
         <li class="nav-item">
           <h3 class="navbar-brand"><%= t('nav.company') %></h3>
         </li>
-      </ul>
-    </div>
-    <% if current_user %>
+        <% if current_user %>
+          <li class="nav-item ">
+            <%= link_to t('nav.me'), root_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to t('nav.events'), events_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to t('nav.categories'), categories_path, class: "nav-link" %>
+          </li>
+        </ul>
+      </div>
       <%= render partial: 'users/partials/user_dropdown' %>
     <% else %>
       <%= render partial: 'users/partials/entry' %>
-    <% end %>
-    <%= render partial: 'layouts/locales' %>
+    </ul>
   </div>
+<% end %>
+<%= render partial: 'layouts/locales' %>
+</div>
 </nav>

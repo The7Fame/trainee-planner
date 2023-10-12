@@ -45,6 +45,9 @@ ru:
     ru: "РУС"
     categories: "Категории"
     language: "Язык"
+    me: "Я"
+    events: "События"
+    categories: "Категории"
 
   user:
     sign_up: "Зареги-ся"

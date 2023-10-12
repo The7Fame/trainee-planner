@@ -21,6 +21,9 @@ en:
     ru: "RU"
     categories: "Categories"
     language: "Language"
+    me: "Me"
+    events: "Events"
+    categories: "Categories"
 
   user:
     sign_up: "Sign Up"
