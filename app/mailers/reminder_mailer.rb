@@ -1,0 +1,12 @@
+# frozen_string_literal: true
+
+class ReminderMailer < ApplicationMailer
+  default from: 'noreply@example.com'
+
+  def reminder(user:, event:)
+    @user = user
+    @event = event
+    @url = event_url(event)
+    mail(to: @user.email, subject: "Reminder: #{@event.name} is coming soon")
+  end
+end

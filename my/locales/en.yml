@@ -116,10 +116,16 @@ en:
     next: "Next"
     last: "Last"
     first: "First"
-  
+
   weather:
     temperature: "Temperature:"
     on_the_street: "On the street:"
     summary: "Summary:"
     chooser_time: "Choose time:"
     
+  mailer:
+    greetings: "Hi, %{user}"
+    coming_event: "We are sending you this email to remind you that %{event_name} is coming soon!"
+    date: "Date: %{event_date}"
+    thanks: "Thank you for using our service!"
+    event_link: "Your event"
