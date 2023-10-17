@@ -44,5 +44,8 @@ module TraineePlanner
 
     # Set default locale
     config.i18n.default_locale = :en
+
+    # Set timezone of Belarus
+    config.time_zone = 'Minsk'
   end
 end
