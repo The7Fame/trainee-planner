@@ -40,6 +40,8 @@ module Weather
         headers: @options
       )
       JSON.parse(response.body)
+    rescue JSON::ParserError
+      { 'message': 'unsuccess' }
     end
   end
 end
