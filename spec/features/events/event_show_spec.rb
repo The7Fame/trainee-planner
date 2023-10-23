@@ -4,12 +4,14 @@ require 'rails_helper'
 
 RSpec.describe 'Event#show', type: :feature do
   describe 'show event' do
-    let(:user) { create(:user) }
+    let!(:user) { create(:user) }
+    let!(:category) { create(:category) }
 
     describe 'when user is authenticated' do
       before do
         login_as(user)
-        create(:event)
+        create(:event, user:, category:)
+        create(:user_category, user:, category:)
         visit event_path(Event.first.id, locale: I18n.locale)
       end
 
