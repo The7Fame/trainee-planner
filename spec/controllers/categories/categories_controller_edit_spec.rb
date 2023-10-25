@@ -12,6 +12,7 @@ RSpec.describe CategoriesController, type: :controller do
 
     describe 'when user is authenticated' do
       before do
+        create(:user_category, user:, category:)
         sign_in(user)
         edit_category
       end

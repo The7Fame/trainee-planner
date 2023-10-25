@@ -34,7 +34,7 @@ RSpec.describe ReminderMailer do
     end
 
     it 'renders the date of the event' do
-      expect(mailer.body.encoded).to match("Date: #{event.event_date}")
+      expect(mailer.body.encoded).to match("Date: #{event.event_date.strftime('%Y-%m-%d %H:%M')}")
     end
   end
 end

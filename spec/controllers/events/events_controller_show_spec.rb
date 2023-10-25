@@ -3,15 +3,17 @@
 require 'rails_helper'
 
 RSpec.describe EventsController, type: :controller do
-  let(:user) { create(:user) }
+  let!(:user) { create(:user) }
+  let!(:category) { create(:category) }
 
   describe 'GET /events/:id' do
     subject(:show_event) { get :show, params: { id: event.id } }
 
-    let(:event) { create(:event) }
+    let(:event) { create(:event, user:, category:) }
 
     describe 'when user is authenticated' do
       before do
+        create(:user_category, user:, category:)
         sign_in(user)
         show_event
       end
